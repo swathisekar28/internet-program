@@ -1,0 +1,55 @@
+<html>
+    <head>
+    </head>
+       
+    <body>
+      
+            <img src="indian team.JPG" alt="can open" width="500" height="250" usemap="#map1"/>
+            <map name="map1">
+                <area shape="rect" coords="96,34,255,372" href="virat.html">
+                 <area shape="rect" coords="259,37,435,378" href="muthu.html">
+                   <area shape="rect" coords="440,34,591,379" href="sachin.html">
+            </map>
+    </body>
+</html>
+
+
+<html>
+    <head>
+        <title>virat</title>
+        
+    </head>
+    <body>
+        <center>
+        <h1>Virat Kohli</h1>
+        <p>Virat Kohli is an Indian international cricketer and the former captain of the Indian national cricket team. He is a right-handed batsman and an occasional medium-fast bowler. He currently represents Royal Challengers Bangalore in the IPL and Delhi in domestic cricket</p>
+        </center>
+    </body>
+</html>
+
+
+<html>
+    <head>
+        <title>sachin</title>
+       
+    </head>
+    <body>
+       <center>
+        <h1>Sachin Tendular</h1>
+        <p>sachin Tendulkar is an Indian international cricketer and the former captain of the Indian national cricket team. He is a right-handed batsman and an occasional medium-fast bowler. He currently represents Royal Challengers Bangalore in the IPL and Delhi in domestic cricket</p>
+        </center>
+    </body>
+</html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        
+    </head>
+    <body>
+       <center>
+        <h1>Muttaiah Muralitharan</h1>
+        <p>Muttaiah Muralitharan is an Indian international cricketer and the former captain of the Indian national cricket team. He is a right-handed batsman and an occasional medium-fast bowler. He currently represents Royal Challengers Bangalore in the IPL and Delhi in domestic cricket</p>
+        </center>
+    </body>
+</html>
