@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+       
+        <style>
+      body{
+background-color: lightblue ;   
+
+} 
+            div{
+                border-color: black;
+                border-style:solid;
+   
+            }
+           h1{
+                font-family: arial;
+                text-shadow: 3px 4px 6px green;
+                text-transform:capitalize;
+                text-color:black;             
+            }
+            h2{
+              font-family:arial;
+              color: green;
+            }
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <h1>Sunshine Multispeciality hospital</h1>
+            <h2>-your care our profession</h2>
+            
+        </div>
+         </center>
+        <p>As humans, we all wish to live a healthy and disease-free life, but this is not practical always. There are times when people need to visit doctors, take diagnostic services for their illness symptoms or get admitted to the hospital due to poor health or a sudden accident. As you look for the best hospital in boisar, you will see two options: General Hospital and Multispecialty Hospital.
+  Many people get confused between both options and choose an unsuitable one. It is highly recommended that you understand the difference between both options and choose the 
+one that is most likely to fulfil your patient’s need for medical treatment, care and recovery. </p>
+        <center>
+<h1>
+<a href="login.html">Login </a>
+</h1>
+    </center>
+    </body>
+</html>
+LOGIN PAGE:
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div{
+                margin:50px;
+               background-image: url("blur.jpg");
+               }
+        </style>
+    </head>
+    <body>
+    <center>
+        <form>
+            <div>
+                <center>    
+                    <h1> login page</h1>
+                    Username:<input type="text" value="enter your name"><br><br>
+                    Date of birth:<input type="number"><br><br>
+                    age:<input type="number" ><br><br>
+                    Email id:<input type="text" ><br><br>
+                     <input type=”submit” value=”submit”>
+                </center>
+            </div>
+        </form>
+    </body>
+</html>
+
+
