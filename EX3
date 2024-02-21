@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>tourism</title>
+        <style>
+            body{
+            
+             background-image: url("amma.jpg");           
+             background-repeat:no-repeat;    
+             background-size:cover;
+            }
+            #p{
+                font-size:40px;
+               display:inline;
+                color:white;
+                text-shadow:2px 2px 5px lightblue;
+                text-transformation:capitalize;
+                font-family:arial;
+            } 
+            #one{
+                color:white;
+            }
+            #u{
+                color:white;
+            }
+            a{
+               position:absolute;
+               right:30px;
+               height:10px
+            }
+            p{
+                color:white;
+            }
+                 
+        </style>
+    </head>
+    <body>
+    <center>
+        <hr>
+        <h1 id="p"> Madurai Tourism</h1>
+        <h2 id="one">   -feel the divine </h2>
+        <hr>
+    </center>
+    <h1><a href= "login.html">login </a></h1>
+    <h1 id="u">Description</h1>       
+    <p>The compact old part of the city—enclosed by the Anai, Naga, and Pasu (Elephant, Snake, and Cow) hills—is centred on Meenakshi Amman (Minakshi-Sundareshwara) Temple. The temple, Tirumala Nayak palace, Teppakulam tank (an earthen embankment reservoir), and a 1,000-pillared hall were rebuilt in the Vijayanagar period (16th–17th century) after the total destruction of the city in 1310. The city walls were removed by the British in 1837 to enable Madurai to expand, and administrative and residential quarters were established north of the river.
+
+Madurai is a major transportation hub for southern India, with road and rail lines radiating from the city. There is also an airport just south of the city, providing both domestic and international passenger and freight services. Large-scale industry has developed in the suburbs. Predominant are cotton spinning and weaving and the manufacture of transport equipment, tobacco, and sugar. Small-scale hand-loom weaving of silks and cottons, which have made Madurai famous throughout history, remains important.
+
+Meenakshi Amman Temple
+Meenakshi Amman Temple
+Carved figures on a tower gate of the Meenakshi Amman (Minakshi-Sundareshwara) Temple, Madurai, Tamil Nadu, India.
+In the early years CE, Madurai was well known for its Tamil sangam (literary society), and a new sangam was established in 1901. The city is home to Madurai Kamaraj University (founded 1966) as well as to medical and law colleges. In addition, the city has a bench of the Madras High Court in Chennai (Madras).
+
+Lying southeast of the Eastern Ghats, the region surrounding Madurai occupies part of the plain of southern India and contains several mountain spurs, including the Palni and Sirumalai hills (north), the Cardamom Hills (west), and the Varushanad and Andipatti hills (south). Between those hills in the west lies the high Kambam Valley. Eastward, the plains drop to 300 feet (90 metres) above sea level but contain isolated hills. The chief river, the Vaigai, flows northeast through the Kambam Valley and then east across the centre of the state.</p>   
+    </center>
+    <center><h1> Places to visit in Madurai</h1>
+                <table style=" border:5px solid white">  
+                    <tr>
+                        <th>Meenakshi amman temple</th>
+                        <th>Thirumalai nayakar mahal</th>
+                        <th>Theppakulam</th>
+                    </tr>
+                    
+                </table>
+                    </center>
+                    
+        
+    </body>
+</html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div{
+                margin:50px;
+               background-image: url("blur.jpg");
+               
+               }
+        </style>
+    </head>
+    <body>
+    <center>
+        <form>
+            <fieldset>
+                <legend>login page</legend>
+            <div>
+                <center>    
+                    <h1> login page</h1>
+                    Username:<input type="text" value="enter your name"><br><br>
+                    Date of birth:<input type="number"><br><br>
+                    age:<input type="number" ><br><br>
+                    Email id:<input type="text" ><br><br>
+                    <input type="submit" value="submit">
+                    <input type="reset" value="cancel">   
+                </center>
+            </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
