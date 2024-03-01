@@ -1,0 +1,96 @@
+1)
+
+let employees = [
+    { name: "John", age: 30 },
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 35 }
+];
+function sortEmployeesByName(employees) {
+    return employees.sort((a, b) => {
+        let nameA = a.name.toLowerCase();
+        let nameB = b.name.toLowerCase();
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+        return 0;
+    });
+}
+
+let sortedEmployees = sortEmployeesByName(employees);
+
+console.log("Employees sorted by name:");
+sortedEmployees.forEach(employee => {
+    console.log(`Name: ${employee.name}, Age: ${employee.age}`);
+});
+
+2)
+function cleanArray(arr) {
+    return arr.filter(item => ![null, 0, "", false, undefined, NaN].includes(item));
+}
+
+let sampleArray = [NaN, 0, 15, false, -22, '', undefined, 47, null];
+
+let cleanedArray = cleanArray(sampleArray);
+
+console.log(cleanedArray); 
+3)
+function findMostFrequentWord(str) {
+   
+    let words = str.toLowerCase().match(/\b\w+\b/g);
+    let wordFreq = {};
+    words.forEach(word => {
+        wordFreq[word] = (wordFreq[word] || 0) + 1;
+    });
+
+    let mostFrequentWord = "";
+    let highestFreq = 0;
+    for (let word in wordFreq) {
+        if (wordFreq[word] > highestFreq) {
+            mostFrequentWord = word;
+            highestFreq = wordFreq[word];
+        }
+    }
+
+    return mostFrequentWord;
+}
+let inputString = "This is a test string is is is"; 
+let mostFrequent = findMostFrequentWord(inputString);
+console.log("The most frequent word is:", mostFrequent);
+4)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paragraph Hover Effect</title>
+<style>
+   
+    p:hover {
+        background-color: yellow;
+    }
+</style>
+</head>
+<body>
+
+<p>Hover over this paragraph to see the background color change to yellow.</p>
+
+</body>
+</html>
+
+5)
+function combineFirstAndLastThreeCharacters(str) {
+    if (str.length < 3) {
+        return str; 
+    } else {
+        let firstThree = str.substring(0, 3); 
+        let lastThree = str.substring(str.length - 3); 
+        return firstThree + lastThree; 
+    }
+}
+
+let inputString = "examplestring";
+let result = combineFirstAndLastThreeCharacters(inputString);
+console.log(result); 
