@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<style>
+.error { color: red; }
+</style>
+</head>
+<body>
+
+<h2>Form Validation Example</h2>
+
+<form id="myForm" onsubmit="return validateForm()">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <span id="nameError" class="error"></span><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br>
+  <span id="emailError" class="error"></span><br>
+  
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br>
+  <span id="passwordError" class="error"></span><br>
+  
+  <label for="phone">Phone Number:</label><br>
+  <input type="text" id="phone" name="phone"><br>
+  <span id="phoneError" class="error"></span><br>
+  
+  <label for="gender">Gender:</label><br>
+  <select id="gender" name="gender">
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select><br>
+  <span id="genderError" class="error"></span><br>
+  
+  <label for="language">Language:</label><br>
+  <input type="text" id="language" name="language"><br>
+  <span id="languageError" class="error"></span><br>
+  
+  <label for="about">About:</label><br>
+  <textarea id="about" name="about"></textarea><br>
+  <span id="aboutError" class="error"></span><br>
+  
+  <label for="zipcode">Zip Code:</label><br>
+  <input type="text" id="zipcode" name="zipcode"><br>
+  <span id="zipcodeError" class="error"></span><br>
+  
+  <input type="submit" value="Register">
+</form>
+
+<script>
+function validateForm() {
+ 
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var phone = document.getElementById("phone").value;
+  var gender = document.getElementById("gender").value;
+  var language = document.getElementById("language").value;
+  var about = document.getElementById("about").value;
+  var zipcode = document.getElementById("zipcode").value;
+
+ 
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var phoneRegex = /^\d{10}$/;
+  var zipcodeRegex = /^\d{5}$/;
+
+  
+  var isValid = true;
+
+  
+  if (name === "") {
+    document.getElementById("nameError").innerHTML = "Name is required";
+    isValid = false;
+  } else {
+    document.getElementById("nameError").innerHTML = "";
+  }
+
+  if (email === "") {
+    document.getElementById("emailError").innerHTML = "Email is required";
+    isValid = false;
+  } else if (!emailRegex.test(email)) {
+    document.getElementById("emailError").innerHTML = "Invalid email format";
+    isValid = false;
+  } else {
+    document.getElementById("emailError").innerHTML = "";
+  }
+
+  if (password === "") {
+    document.getElementById("passwordError").innerHTML = "Password is required";
+    isValid = false;
+  } else if (password.length < 6) {
+    document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters long";
+    isValid = false;
+  } else {
+    document.getElementById("passwordError").innerHTML = "";
+  }
+
+  if (phone === "") {
+    document.getElementById("phoneError").innerHTML = "Phone Number is required";
+    isValid = false;
+  } else if (!phoneRegex.test(phone)) {
+    document.getElementById("phoneError").innerHTML = "Invalid phone number";
+    isValid = false;
+  } else {
+    document.getElementById("phoneError").innerHTML = "";
+  }
+
+  if (gender === "") {
+    document.getElementById("genderError").innerHTML = "Gender is required";
+    isValid = false;
+  } else {
+    document.getElementById("genderError").innerHTML = "";
+  }
+  if (language === "") {
+    document.getElementById("languageError").innerHTML = "Language is required";
+    isValid = false;
+  } else {
+    document.getElementById("languageError").innerHTML = "";
+  }
+
+  if (about === "") {
+    document.getElementById("aboutError").innerHTML = "About is required";
+    isValid = false;
+  } else {
+    document.getElementById("aboutError").innerHTML = "";
+  }
+  if (zipcode === "") {
+    document.getElementById("zipcodeError").innerHTML = "Zip Code is required";
+    isValid = false;
+  } else if (!zipcodeRegex.test(zipcode)) {
+    document.getElementById("zipcodeError").innerHTML = "Invalid zipcode format";
+    isValid = false;
+  } else {
+    document.getElementById("zipcodeError").innerHTML = "";
+  }
+
+  return isValid;
+}
+</script>
+
+</body>
+</html>
