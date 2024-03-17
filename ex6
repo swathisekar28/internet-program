@@ -1,0 +1,58 @@
+1)
+<!DOCTYPE html>
+Name:T.C.Swathi Roll no:22CSEB30 Page no:
+<head>
+<title>Add to List Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+#list-container
+{
+ margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div>
+<label for="item-input">Enter an item:</label>
+ <input type="text" id="item-input">
+<button id="add-btn">Add to List</button>
+</div><div id="list-container">
+<ul id="item-list"></ul>
+</div>
+<script>
+ $(document).ready(function() {
+ $('#add-btn').click(function() {
+ var newItem = $('#item-input').val();
+ if (newItem.trim() === '') {
+ alert('Please enter a value.');
+ return;
+ }
+ $('#item-list').append('<li>' + newItem + '</li>');
+$('#item-input').val(''); }); });
+</script>
+</body>
+</html>
+2)
+<!DOCTYP html>
+ <head>
+<title>Count Consonants</title>
+<scriptsrc="https://code.jquery.com/jquery3.6.0.min.js"></script>
+</head>
+<body>
+<div> 
+<label for="input-text">Enter a string:</label>
+ <input type="text" id="input-text">
+<button id="count-btn">Count Consonants</button>
+</div>
+<div id="result"></div>
+<script> $(document).ready(function() {
+ $('#count-btn').click(function() { 
+ var inputText = $('#input-text').val().toLowerCase(); 
+ var consonants = inputText.match(/[bcdfghjklmnpqrstvwxyz]/g); 
+ var count = consonants ? consonants.length : 0; 
+ $('#result').text('Number of consonants: ' + count); 
+ });
+ });
+</script>
+</body>
+</html>
