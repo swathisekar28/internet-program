@@ -1,0 +1,85 @@
+<cars>
+  <car>
+    <make>Toyota</make>
+    <model>Camry</model>
+    <year>2022</year>
+    <color>Blue</color>
+  </car>
+  <car>
+    <make>Ford</make>
+    <model>Mustang</model>
+    <year>2023</year>
+    <color>Red</color>
+  </car>
+  <car>
+    <make>Audi</make>
+    <model>A4</model>
+    <year>2024</year>
+    <color>Black</color>
+  </car>
+</cars>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Gallery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .car-gallery {
+      display: flex;
+      justify-content: space-around;
+    }
+    .car {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+      width: 200px;
+    }
+    .car:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="car-gallery"></div>
+  <div id="car-details"></div>
+
+  <script>
+    $(document).ready(function(){
+      $.ajax({
+        type: "GET",
+        url: "cars.xml",
+        dataType: "xml",
+        success: function(xml){
+          $(xml).find('car').each(function(){
+            var make = $(this).find('make').text();
+            var model = $(this).find('model').text();
+            var year = $(this).find('year').text();
+            var color = $(this).find('color').text();
+            var carHTML = '<div class="car" data-make="' + make + '" data-model="' + model + '" data-year="' + year + '" data-color="' + color + '">' +
+                            '<h3>' + make + ' ' + model + '</h3>' +
+                            '<p>Year: ' + year + '</p>' +
+                            '<p>Color: ' + color + '</p>' +
+                          '</div>';
+            $('.car-gallery').append(carHTML);
+          });
+        }
+      });
+
+      
+      $(document).on('click', '.car', function(){
+        var make = $(this).data('make');
+        var model = $(this).data('model');
+        var year = $(this).data('year');
+        var color = $(this).data('color');
+        var detailsHTML = '<h2>' + make + ' ' + model + '</h2>' +
+                          '<p>Year: ' + year + '</p>' +
+                          '<p>Color: ' + color + '</p>';
+        $('#car-details').html(detailsHTML);
+      });
+    });
+  </script>
+</body>
+</html>
